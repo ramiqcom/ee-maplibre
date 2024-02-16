@@ -1,0 +1,4 @@
+[
+	{ "value": "landsat", "label": "Landsat" },
+	{ "value": "s2", "label": "Sentinel-2" }
+]
