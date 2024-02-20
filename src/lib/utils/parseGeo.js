@@ -1,5 +1,7 @@
 // @ts-nocheck
 import { kml } from '@tmcw/togeojson';
+import reproject from 'reproject';
+import epsg from 'epsg'
 
 // Dictionary of format and the parser function
 const parser = {
@@ -34,8 +36,14 @@ async function shapefileParser(file){
 			'Content-Type': 'application/octet-stream'
 		}
 	});
+
+	if (!res.ok) {
+		throw new Error(await res.text());
+	}
+
 	return await res.json();
-}
+}	
+	
 
 /**
  * Function to parse geojson
@@ -43,7 +51,9 @@ async function shapefileParser(file){
  * @returns {Promise.<FeatureCollection>}
  */
 async function geojsonParser(file){
-	return await file.json();
+	const geojson = JSON.parse(await file.text());
+	const reprojected = reproject.toWgs84(geojson, undefined, epsg);
+	return reprojected;
 }
 
 /**

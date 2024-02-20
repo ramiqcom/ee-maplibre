@@ -7,7 +7,11 @@ import shp from "shpjs";
  * @returns {Response}
  */
 export async function POST(event){
-	const buffer = await event.request.arrayBuffer();
-	const geojson = await shp(buffer);
-	return new Response(JSON.stringify(geojson));
+	try {
+		const buffer = await event.request.arrayBuffer();
+		const geojson = await shp(buffer);
+		return new Response(JSON.stringify(geojson));
+	} catch (error) {
+		return new Response(error.message, { ok: false, status: 404 })
+	}
 }
