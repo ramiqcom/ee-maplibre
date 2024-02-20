@@ -3,7 +3,7 @@
 	import 'maplibre-gl/dist/maplibre-gl.css'
 	import maplibre from 'maplibre-gl';
 	import { onMount } from 'svelte';
-	import { basemap, map, geojson } from '$lib/store.js';
+	import { basemap, map, geojson, vectorDisabled, vectorVisibled, vectorId } from '$lib/store.js';
 	import parseGeo from '$lib/utils/parseGeo';
 	import { bbox } from '@turf/turf';
 
@@ -32,23 +32,23 @@
 
 		// When geojson change do something
 		geojson.subscribe(value => {
-			const dataId = 'vector';
+			$vectorId = 'vector';
 
 			if (value) {
-				if ($map.getSource(dataId)) {
-					$map.getSource(dataId).setData(value);
+				if ($map.getSource($vectorId)) {
+					$map.getSource($vectorId).setData(value);
 				} else {
-					$map.addSource(dataId, {
+					$map.addSource($vectorId, {
 						type: 'geojson',
 						data: value
 					});
 
 					$map.addLayer({
-						id: dataId,
+						id: $vectorId,
 						type: 'fill',
-						source: dataId,
+						source: $vectorId,
 						paint: {
-							'fill-color': 'white',
+							'fill-color': 'lightskyblue',
 							'fill-opacity': 0.1,
 						}
 					});
@@ -57,8 +57,11 @@
 				// Zoom to feature
 				const bounds = bbox(value);
 				$map.fitBounds(bounds);
+
+				// Allow the vector check and make it checked
+				$vectorDisabled = false;
+				$vectorVisibled = true;
 			}			
-			
 		});
 
 		/**

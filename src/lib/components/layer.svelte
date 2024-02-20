@@ -3,7 +3,7 @@
 	import Option from "$lib/components/option.svelte";
 	import Checkbox from "./checkbox.svelte";
 	import basemaps from '$lib/data/basemap.json';
-	import { basemap, vectorDisabled, vectorVisibled } from '$lib/store.js';
+	import { basemap, vectorDisabled, vectorVisibled, vectorId, map } from '$lib/store.js';
 </script>
 
 <div id='image' class="flexible vertical panel">
@@ -25,6 +25,7 @@
 			checked={$vectorVisibled}
 			label={'Vector'}
 			disabled={$vectorDisabled}
+			onChange={checked => $map.setLayoutProperty($vectorId, 'visibility', checked ? 'visible' : 'none') }
 		/>
 	</div>
 
