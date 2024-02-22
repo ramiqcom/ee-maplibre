@@ -1,0 +1,4 @@
+{
+	"landsat": [ "LANDSAT/LC08/C02/T1_L2", "LANDSAT/LC09/C02/T1_L2" ],
+	"s2": [ "COPERNICUS/S2_SR" ]
+}

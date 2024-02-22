@@ -1,0 +1,26 @@
+{
+	"landsat": [
+		{ "value" : "SR_B1", "label": "Coastal" },
+		{ "value" : "SR_B2", "label": "Blue" },
+		{ "value" : "SR_B3", "label": "Green" },
+		{ "value" : "SR_B4", "label": "Red" },
+		{ "value" : "SR_B5", "label": "NIR" },
+		{ "value" : "SR_B6", "label": "SWIR1" },
+		{ "value" : "SR_B7", "label": "SWIR2" }
+	],
+
+	"s2": [
+		{ "value" : "B1", "label": "Coastal" },
+		{ "value" : "B2", "label": "Blue" },
+		{ "value" : "B3", "label": "Green" },
+		{ "value" : "B4", "label": "Red" },
+		{ "value" : "B5", "label": "RE1" },
+		{ "value" : "B6", "label": "RE2" },
+		{ "value" : "B7", "label": "RE3" },
+		{ "value" : "B8", "label": "NIR" },
+		{ "value" : "B8A", "label": "RE4" },
+		{ "value" : "B9", "label": "WV" },
+		{ "value" : "B11", "label": "SWIR1" },
+		{ "value" : "B12", "label": "SWIR2" }
+	]
+}

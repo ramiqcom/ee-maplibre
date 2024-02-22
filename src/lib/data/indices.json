@@ -1,0 +1,11 @@
+[
+	{ "label": "NDVI", "value": "NDVI", "formula": "NDVI = (NIR - Red) / (NIR + Red)", "palette": ["red", "yellow", "green"] },
+	{ "label": "SAVI", "value": "SAVI", "formula": "SAVI = (NIR - Red) * 1.5 / (NIR + Red + 0.5)", "palette": ["red", "yellow", "green"]  },
+	{ "label": "EVI", "value": "EVI", "formula": "EVI = (NIR - Red) / (NIR + 6 * Red - 7.5 * Blue + 1)", "palette": ["red", "yellow", "green"]  },
+	{ "label": "NDBI", "value": "NDBI", "formula": "NDBI = (SWIR1 - NIR) / (SWIR1 + NIR)", "palette": ["blue", "white", "red"]  },
+	{ "label": "NDMI", "value": "NDMI", "formula": "NDMI = (NIR - SWIR1) / (NIR + SWIR1)", "palette": ["red", "white", "blue"]  },
+	{ "label": "NDWI", "value": "NDWI", "formula": "NDWI = (Green - NIR) / (Green + NIR)", "palette": ["red", "white", "blue"]  },
+	{ "label": "MNDWI", "value": "MNDWI", "formula": "MNDWI = (Green - SWIR1) / (Green + SWIR1)", "palette": ["red", "white", "blue"]  },
+	{ "label": "NBR", "value": "NBR", "formula": "NBR = (NIR - SWIR2) / (NIR + SWIR2)", "palette": ["red", "yellow", "green"]  },
+	{ "label": "NBR2", "value": "NBR2", "formula": "NBR2 = (SWIR1 - SWIR2) / (SWIR1 + SWIR2)", "palette": ["red", "yellow", "green"]  }
+]

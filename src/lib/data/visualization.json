@@ -1,0 +1,5 @@
+[
+	{ "label": "Multispectral", "value": "multi" },
+	{ "label": "Single band", "value": "single" },
+	{ "label": "Spectral indices", "value": "indices" }
+]

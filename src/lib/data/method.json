@@ -1,0 +1,5 @@
+[
+	{ "value": "cloudless", "label": "Fewest cloud cover" },
+	{ "value": "latest", "label": "Latest" },
+	{ "value": "composite", "label": "Cloud mask composite" }
+]

@@ -1,4 +1,4 @@
 [
-	{ "value": "landsat", "label": "Landsat" },
+	{ "value": "landsat", "label": "Landsat OLI" },
 	{ "value": "s2", "label": "Sentinel-2" }
 ]

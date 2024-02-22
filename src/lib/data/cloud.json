@@ -1,0 +1,4 @@
+{
+	"landsat": "CLOUD_COVER",
+	"s2": "CLOUDY_PIXEL_PERCENTAGE"
+}

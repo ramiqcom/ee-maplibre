@@ -68,7 +68,7 @@
 		 * Function to set geojson
 		 * @param {Blob} file
 		 * @param {String} format
-		 * @returns {Void}
+		 * @returns {Promise.<Void>}
 		 */
 		 async function setGeojson(file, format) {
 			$geojson = await parseGeo(file, format);

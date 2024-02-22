@@ -1,8 +1,8 @@
 <script>
 	// @ts-nocheck
-	export let value;
-	export let options;
-	export let onChange;
+	export let value = {};
+	export let options = [];
+	export let onChange = () => null;
 </script>
 
 <select on:change={e => {
@@ -20,6 +20,7 @@
 		height: 3vh;
 		background-color: gray;
 		color: whitesmoke;
+		border: none;
 	}
 
 	select:enabled:hover {
@@ -28,7 +29,8 @@
 
 	select:disabled {
 		background-color: transparent;
-		border: thin solid whitesmoke;
+		border: thin solid gray;
+		color: gray
 	}
 
 	option {
